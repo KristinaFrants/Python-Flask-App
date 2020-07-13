@@ -29,7 +29,7 @@ def article(id):
 class RegisterForm(Form):
     name = StringField('First Name', [validators.Length(max=50)])
     username  = StringField('Username', [validators.Length(max=50)])
-    email  = StringField('email', [validators.Length(min=6, max=50)])
+    email  = StringField('email', [validators.Length(min=6, max=50), validators.DataRequired() ])
     password  = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message="Password do not match")
