@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-    <a class="navbar-brand" href="/register">Register Flask App</a>
+    <a class="navbar-brand" href="/">Flask App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,6 +25,9 @@
         {% else %}
         <li class="nav-item navbar-right">
           <a class="nav-link" href="/login">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register" tabindex="-1" >Register</a>
         </li>
         {% endif %}
       </ul>
