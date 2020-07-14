@@ -12,6 +12,7 @@ gunicorn = "*"
 wtforms = "*"
 mysql = "*"
 mysqlclient = "*"
+flask_mysqldb = "*"
 
 [requires]
 python_version = "3.6"
