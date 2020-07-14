@@ -9,6 +9,9 @@ pylint = "*"
 [packages]
 flask = "*"
 gunicorn = "*"
+wtforms = "*"
+mysql = "*"
+mysqlclient = "*"
 
 [requires]
 python_version = "3.6"
