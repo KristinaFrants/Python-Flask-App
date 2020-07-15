@@ -10,13 +10,13 @@ load_dotenv()
 
 app = Flask(__name__)
 
-
 #config mysql
 app.config['MYSQL_HOST'] = os.environ.get('DB_HOST')
 app.config['MYSQL_USER'] = os.environ.get('DB_USERNAME')
 app.config['MYSQL_PASSWORD'] = os.environ.get('DB_PASSWORD')
 app.config['MYSQL_DB'] = os.environ.get('DB_DBNAME')
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.secret_key = os.urandom(24)
 
 mysql = MySQL(app)
 
