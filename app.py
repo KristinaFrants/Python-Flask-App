@@ -16,7 +16,7 @@ app.config['MYSQL_HOST'] = os.environ.get('DB_HOST')
 app.config['MYSQL_USER'] = os.environ.get('DB_USERNAME')
 app.config['MYSQL_PASSWORD'] = os.environ.get('DB_PASSWORD')
 app.config['MYSQL_DB'] = os.environ.get('DB_DBNAME')
-# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
 
@@ -36,6 +36,8 @@ def articles():
     cur = mysql.connection.cursor()
     result = cur.execute("SELECT * FROM articles")
     articles = cur.fetchall()
+    print(articles)
+
     if result > 0:
         return render_template('articles.html', articles=articles)
     else:
