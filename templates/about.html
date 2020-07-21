@@ -2,7 +2,22 @@
 
 {% block body %}
 <div class='jumbotron text-center'>
-    <h1>About Us</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
+    <h1>About This App</h1>
+    <p>
+        <h5>Thats a basic social network Flask app. User is abble to Register, Login, Logout, Post, Edit and Delete articles. MYSQL Dolphin is used to communicate with a database. </h5><br>
+        <h4>Bugs that have been faced while buildinf app:</h4><br>
+        <li>
+            Because no SQLAlchemy is used, I had manually to implement all the requirements for MYSQl and match it with <b>.env</b> file
+
+        </li>
+        <li>
+           While installing pip, <b>requirements.txt</b> were conflicting with pipfile, so I had to remove <b>pipenv</b> complitelly
+        </li>
+        <li>
+            When deployed to <b>Heroku</b> had to import <b>os</b> and change MYSQL config to match <b>.env</b> and Heroku JawDB for MYSQL
+        </li>
+        <li> Most of the small bugs were misspeling or missed comma in functions or routes </li>
+        <li> For each route an HTML template is created, most components are returned with <b>render_template</b> and helpers</li>
+    </p>
 </div>
 {% endblock %}
